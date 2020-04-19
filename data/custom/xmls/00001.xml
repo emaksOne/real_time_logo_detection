@@ -1,0 +1,27 @@
+<annotation>
+    <folder>images_aug</folder>
+    <filename>00001.jpg</filename>
+    <size>
+        <width>1080</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>adidas</name>
+        <bndbox>
+            <xmin>476</xmin>
+            <ymin>380</ymin>
+            <xmax>576</xmax>
+            <ymax>454</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>nike</name>
+        <bndbox>
+            <xmin>180</xmin>
+            <ymin>549</ymin>
+            <xmax>308</xmax>
+            <ymax>603</ymax>
+        </bndbox>
+    </object>
+</annotation>
