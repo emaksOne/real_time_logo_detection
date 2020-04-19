@@ -20,3 +20,5 @@ For detection from webcam run command
 ```
 python webcam.py --model_def config/yolov3-tiny-custom.cfg --class_path data/custom/classes.names --weights_path weights/yolov3_ckpt_98.pth
 ```
+
+![](logo_detection_example.gif)
