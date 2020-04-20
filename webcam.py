@@ -36,7 +36,7 @@ def init_model(opt):
     return model, device
 
 
-def detect(origin_frame, opt):
+def detect(origin_frame, opt, colors):
     frame = cv2.cvtColor(origin_frame, cv2.COLOR_BGR2RGB)
     frame = transforms.ToTensor()(frame)
     frame, _ = pad_to_square(frame, 0)
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     
     np.random.seed(42)
-    colors = [tuple(np.random.randint(255, size=3)) for _ in classes]
+    colors = [tuple(np.random.randint(255, size=3).tolist()) for _ in classes]
     # colors = [
     #     (255, 0, 0),  # addidas
     #     (0, 255, 0),  # nike
@@ -142,7 +142,7 @@ if __name__ == "__main__":
         origin_frame = cv2.resize(
             origin_frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
         origin_frame = cv2.flip(origin_frame, 180)
-        origin_frame = detect(origin_frame, opt)
+        origin_frame = detect(origin_frame, opt, colors)
         cv2.imshow('Input', origin_frame)
 
         c = cv2.waitKey(1)
