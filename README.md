@@ -2,9 +2,10 @@
 
 Yolo v3 implementation was taken from https://github.com/eriklindernoren/PyTorch-YOLOv3
 
-I have chosen 3 classes: adidas, nike, puma. Collect dataset by shooting photos from a webcam. It is clothes with brand logos. Then I have performed data augmentation to increase my dataset. 
+I have chosen 3 classes: adidas, nike, puma. And I prefer tiny-yolo-v3 over yolo-v3 because it is faster on cpu. Collect dataset by shooting photos from a webcam. It is clothes with brand logos. Then I have performed data augmentation to increase my dataset. 
 
-Go to weights folder and run download_weights.sh to download weights for logo detection (yolov3_ckpt_98.pth)
+Here is instruction https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/356#issuecomment-615858750
+how I obtained backbone pretrain weights for tiny yolo-v3 since I didn't have enough data to train from scratch
 
 Also, you can train your weights on your data that located in:
 * images - data/custom/images
